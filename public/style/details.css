@@ -15,3 +15,11 @@ tbody {
   background-color: white;
   color: #7c4400;
 }
+
+.create-btn {
+  width: 20%;
+  height: 8%;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,38 @@
+body {
+  background-color: #9b835f;
+}
+
+section {
+  height: 100vh;
+}
+
+.player-btn {
+  background-color: #fdb65f;
+  font-weight: bold;
+  font-size: 15pt;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.player-btn:hover {
+  background-color: #d69648;
+  color: white;
+}
+
+.admin-btn {
+  font-weight: bold;
+  font-size: 15pt;
+  color: #fdb65f;
+  width: 200px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.admin-btn:hover {
+  background-color: rgb(206, 206, 206);
+  color: #faaa49;
+}

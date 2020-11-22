@@ -3,10 +3,10 @@ import { Model } from 'sequelize'
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      const { UserHistory } = models
+      const { UserBiodata, UserHistory } = models
 
-      // User.hasOne(UserBiodata, { foreignKey: 'id' })
-      User.hasMany(UserHistory, { foreignKey: 'id' })
+      User.hasOne(UserBiodata, { foreignKey: 'id' })
+      User.hasOne(UserHistory, { foreignKey: 'id' })
     }
   }
 

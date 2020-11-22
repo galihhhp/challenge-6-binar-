@@ -17,7 +17,8 @@ module.exports = {
       },
       gender: {
         type: Sequelize.ENUM,
-        values: ['Male', 'Female']
+        values: ['Male', 'Female'],
+        allowNull: true
       },
       age: {
         type: Sequelize.INTEGER,
@@ -30,6 +31,7 @@ module.exports = {
       userId: {
         allowNull: false,
         type: Sequelize.UUID,
+        onDelete: 'cascade',
         references: {
           model: 'User',
           key: 'id',

@@ -1,0 +1,29 @@
+.container-flex {
+  height: 100vh;
+}
+
+body {
+  background-color: #f7b35f;
+}
+
+.card {
+  height: 200px;
+}
+
+.btn {
+  background-color: #f8aa4b;
+  width: 100px;
+}
+
+.btn:hover {
+  background-color: #be6900;
+  width: 100px;
+}
+
+.create-btn {
+  width: 20%;
+  height: 8%;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}

@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       const { User } = models
 
-      UserBiodata.belongsTo(User, { foreignKey: 'userId' })
+      UserBiodata.belongsTo(User, { foreignKey: 'id' })
     }
   }
 

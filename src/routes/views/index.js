@@ -1,9 +1,13 @@
 import express from 'express'
-import PostController from '../../controllers/PostController'
+import ViewController from '../../controllers/ViewController'
 
 const router = express.Router()
 
-router.get('/', PostController.getIndexView)
-router.get('/history', PostController.getHistoryView)
+router.get('/', ViewController.getHomeView)
+router.get('/dashboard', ViewController.getDashboardView)
+router.get('/details', ViewController.getDetailsView)
+router.get('/history', ViewController.getHistoryView)
+router.get('/alldetails', ViewController.getAllDetailsView)
+router.get('/admin', ViewController.getAdminLoginView)
 
 export default router
