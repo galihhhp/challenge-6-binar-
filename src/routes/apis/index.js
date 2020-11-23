@@ -6,6 +6,7 @@ import GameController from '../../controllers/GameController'
 
 const router = express.Router()
 
+router.get('/all', UserController.getAll)
 router.get('/users', UserController.get)
 router.get('/users/:id', UserController.getById)
 router.post('/users', UserController.create)

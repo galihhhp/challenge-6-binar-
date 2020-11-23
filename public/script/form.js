@@ -90,3 +90,13 @@ createUser.addEventListener('click', () => {
     .then(res => res.json())
     .catch(err => res.send(err))
 })
+
+
+var xhr = new XMLHttpRequest();
+xhr.addEventListener('load', () => {
+  // callback, ketika server memberi response
+  console.log(xhr.responseText);
+});
+xhr.open('POST', 'http://localhost:3000/apis/users/'); // tentukan server tujuan
+xhr.send(); // eksekusi
+alert(2);

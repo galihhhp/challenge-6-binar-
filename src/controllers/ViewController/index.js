@@ -33,38 +33,6 @@ class ViewController {
         }
       })
 
-    // const deleteButton = document.querySelector('#delBtn');
-    // const endpoint = `/apis/history`
-    // deleteButton.addEventListener('click', () => {
-    //   fetch(endpoint, {
-    //       method: 'DELETE'
-    //     })
-    //     .then(res => res.json())
-    //     .then(res => location.reload())
-    //     .catch(err => console.log(err));
-    // })
-
-    // const p = document.querySelectorAll('.player')
-    // p.forEach((choice) => {
-    //   choice.addEventListener('click', () => {
-    //     player.playerChoice(choice)
-
-    //     const data = {
-    //       result: game.startResult
-    //     }
-
-    //     const options = {
-    //       method: 'POST',
-    //       headers: {
-    //         'Content-Type': 'application/json'
-    //       },
-    //       body: JSON.stringify(data)
-    //     }
-
-    //     fetch('/apis/history', options)
-    //   })
-    // })
-
     // res.render('dashboard', {
     //   users: User
     // })

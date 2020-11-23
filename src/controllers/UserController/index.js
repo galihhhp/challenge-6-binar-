@@ -1,4 +1,4 @@
-import { User, UserBiodata } from '../../models'
+import { User, UserBiodata, UserHistory } from '../../models'
 import fetch from 'node-fetch'
 
 
@@ -17,6 +17,55 @@ class UserController {
       })
       .then((user) => res.status(200).json(user))
       .catch((err) => res.status(400).send({ msg: err }))
+  }
+
+  static getAll = (req, res) => {
+    User.findAll({
+      include: [{
+        model: UserBiodata,
+        model: UserHistory
+      }]
+    }).then(users => {
+      const resObj = users.map(user => {
+
+        return Object.assign({}, {
+          id: user.id,
+          username: user.username,
+          password: user.password,
+          bio: user.bio.map(bio => {
+            return Object.assign({}, {
+              id: bio.id,
+              name: bio.name,
+              email: bio.email,
+              gender: bio.age,
+              age: bio.age,
+              city: bio.city,
+              userId: user.id
+            })
+          }),
+          histoy: user.histoy.map(history => {
+            return Object.assign({}, {
+              id: history.id,
+              win: history.win,
+              draw: history.draw,
+              lose: history.lose,
+              userId: user.id
+            })
+          })
+        })
+      })
+      res.json(resObj)
+    }).catch((err) => {
+      if (err.response) {
+        console.log(err.response.data);
+        console.log(err.response.status);
+        console.log(err.response.headers);
+      } else if (err.requiest) {
+        console.log(err.requiest);
+      } else {
+        console.log('Error', err.message);
+      }
+    })
   }
 
   static create = (req, res) => {
