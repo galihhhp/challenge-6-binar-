@@ -1,0 +1,15 @@
+.container-flex {
+  height: 100vh;
+}
+
+body {
+  background-color: #c0c0c0;
+}
+
+.create-btn {
+  width: 50%;
+  height: 8%;
+  background-color: rgb(51, 128, 0);
+  color: white;
+  font-weight: bold;
+}

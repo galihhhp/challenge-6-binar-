@@ -29,35 +29,47 @@
           </tr>
         </thead>
         <tbody>
-          <% Array.from(users).forEach(() => { %>
-            <tr>
-              <td>
-                <%= users[0] %>
-              </td>
-              <td>
-                <%= users[1] %>
-              </td>
-              <td>
-                <%= users[2] %>
-              </td>
-              <td>
-                <a href="">See Details</a>
-              </td>
-              <td>
-                <a href="">See History</a>
-              </td>
-            </tr>
-            <% }) %>
+          <tbody>
+            <% Array.from(users).forEach((user) => { %>
+              <tr>
+                <td>
+                  <%= user %>
+                </td>
+                <td>
+                  <%= user %>
+                </td>
+                <td>
+                  <%= user %>
+                </td>
+                <td>
+                  <a href="">See Details</a>
+                </td>
+                <td>
+                  <a href="">See History</a>
+                </td>
+                <td>
+                  <a href="">Edit</a>
+                </td>
+                <td>
+                  <a href="">Delete</a>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+
         </tbody>
       </table>
-      <button class="create-btn btn mt-5">CREATE</button>
-      <button class="details-btn btn mt-3">DETAILS</button>
-      <button class="history-btn btn mt-3">HISTORY</button>
+      <form action="http://localhost:3000/createUser">
+        <button class="create-btn btn mt-5">CREATE</button>
+      </form>
+      <button id="toAllDetails" class="details-btn btn mt-3">DETAILS</button>
+      <button id="toAllHistory" class="history-btn btn mt-3">HISTORY</button>
+      <button id="reset" class="reset-btn btn mt-3">RESET DB</button>
     </section>
 
   </section>
 
-  <script src="<%= `${process.env.APP_URL}/script/index.js` %>"></script>
+  <script src="<%= `${process.env.APP_URL}/script/dashboard.js` %>"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
@@ -67,3 +79,32 @@
 </body>
 
 </html>
+
+
+
+<% if (users.lenght) {
+  for (let user = 0; user < users.lenght; users++) {%>
+  <tr>
+    <td>
+      <%= user[i].id %>
+    </td>
+    <td>
+      <%= user[i].username %>
+    </td>
+    <td>
+      <%= user[i].password %>
+    </td>
+    <td>
+      <a href="">See Details</a>
+    </td>
+    <td>
+      <a href="">See History</a>
+    </td>
+    <td>
+      <a href="">Edit</a>
+    </td>
+    <td>
+      <a href="">Delete</a>
+    </td>
+  </tr>
+  <% }} %>

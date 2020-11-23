@@ -1,0 +1,67 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="<%= `${process.env.APP_URL}/style/form.css` %>">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <section class="container">
+    <section class="container-flex d-flex flex-column justify-content-center align-items-center">
+      <form id="userForm">
+        <div class="form-group">
+          <label for="inputUsername">Username</label>
+          <input type="text" class="form-control" id="usernameForm" placeholder="Username" min="1" max="10" required>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="passwordForm" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="nameForm" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="emailForm" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="inputGender">Gender</label>
+          <input type="text" class="form-control" id="genderForm" placeholder="Gender">
+        </div>
+        <div class="form-group">
+          <label for="inputAge">Age</label>
+          <input type="number" class="form-control" id="ageForm" placeholder="Age">
+        </div>
+        <div class="form-group">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="cityForm" placeholder="City">
+        </div>
+        <button id="createUser" class="create-btn btn" type="submit">CREATE</button>
+      </form>
+      <form action="http://localhost:3000/dashboard">
+        <button class="btn mt-3">BACK</button>
+      </form>
+
+    </section>
+
+  </section>
+
+  <script src="<%= `${process.env.APP_URL}/script/form.js` %>"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

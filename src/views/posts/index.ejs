@@ -8,7 +8,7 @@
   <title>Challenge Chapter 5</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="<%= `${process.env.APP_URL}/style/style.css` %>">
+  <link rel="stylesheet" href="<%= `${process.env.APP_URL}/style/game.css` %>">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
 
 </head>
@@ -78,7 +78,7 @@
       </p>
     </article>
     <div class="container">
-      <form action="/history">
+      <form action="/game/history">
         <button id="historyBtn" class="btn history">Game History</button>
       </form>
     </div>
